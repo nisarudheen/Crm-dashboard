@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<template>
+    <t t-name="DashboardDashboard">
+        <section class="dashboard_main_section" id="main_section_manager">
+            <br/>
+            <div class="col-12 col-sm-12 col-md-8">
+                <h2 class="section-header">CRM Dashboard</h2>
+            </div>
+            <br/>
+            <div class="col-12 col-sm-12 col-md-4">
+                <form class="form-group">
+                    <select id="income_expense_values" class="form-control">
+                        <option id="this_year" value="this_year">This Year
+                        </option>
+                        <option id="this_quarter" value="this_quarter">This
+                            Quarter
+                        </option>
+                        <option id="this_month" value="this_month" selected="">
+                            This Month
+                        </option>
+                        <option id="this_week" value="this_week">This Week
+                        </option>
+                    </select>
+                </form>
+            </div>
+            <div class="crm_dash_cards row">
+                <div class="col-sm-12 col-md-3">
+                    <div class="dashboard-card card-shadow my_lead">
+                        <div class="dashboard-card__icon-container bg-mauve-light d-flex justify-content-center align-items-center">
+                            <i class="fa fa-line-chart text-mauve"/>
+                        </div>
+                        <h4>My Leads</h4>
+                        <div id="my_lead"
+                             style="margin-top: 10px; font-size:20px;"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <div class="dashboard-card card-shadow opportunity">
+                        <div class="dashboard-card__icon-container bg-mauve-light d-flex justify-content-center align-items-center">
+                            <i class="fa fa-trophy text-mauve"/>
+                        </div>
+                        <h4>My Opportunities</h4>
+                        <div id="opportunity"
+                             style="margin-top: 10px; font-size:20px;"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <div class="dashboard-card card-shadow exp_revenue">
+                        <div class="dashboard-card__icon-container bg-mauve-light d-flex justify-content-center align-items-center">
+                            <i class="fa fa-usd text-mauve"/>
+                        </div>
+                        <h4>Expected Revenue</h4>
+                        <div id="expected_revenue"
+                             style="margin-top: 10px; font-size:20px;"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <div class="dashboard-card card-shadow revenue_card revenue_card">
+                        <div class="dashboard-card__icon-container bg-mauve-light d-flex justify-content-center align-items-center">
+                            <i class="fa fa-usd text-mauve"/>
+                        </div>
+                        <h4>Revenue</h4>
+                        <div id="revenue"
+                             style="margin-top: 10px; font-size:20px;"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <div class="dashboard-card card-shadow win_ratio">
+                        <div class="dashboard-card__icon-container bg-mauve-light d-flex justify-content-center align-items-center">
+                            <i class="fa fa-percent text-mauve"/>
+                        </div>
+                        <h4>Win Ratio</h4>
+                        <div id="win_ratio"
+                             style="margin-top: 10px; font-size:20px;"/>
+                    </div>
+                </div>
+                <div>
+                    <canvas class="stage_graph" style="max-width:1800px;max-hight:300px;"></canvas>
+                    <canvas class="stage_graph_year" style="max-width:1800px;max-hight:300px;"></canvas>
+                    <canvas class="stage_graph_month" style="max-width:1800px;max-hight:300px;"></canvas>
+                    <canvas class="stage_graph_week" style="max-width:1800px;max-hight:300px;"></canvas>
+                    <canvas class="stage_graph_quarter" style="max-width:1800px;max-hight:300px;"></canvas>
+                </div>
+            </div>
+        </section>
+    </t>
+</template>
